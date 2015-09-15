@@ -141,7 +141,7 @@ Some alternatives for building OCaml projects are:
   (and little documentation), it's more of
   a build-your-own-build-system toolkit for now.
 - [obuild](https://github.com/ocaml-obuild/obuild) wants to be
-  a really-simple build system with a declarative configuration
+  a really-simple build system with a declarative configuration 
   language that has 80% the features, to cover most simple projects.
 
 The "Real World OCaml" book uses a tool named `corebuild`, which is in
@@ -877,13 +877,13 @@ as the latter does not include ocamlfind-specific tags.
 Some examples of documentation of rules or flags are the following:
 
     rule "ocaml: modular menhir (mlypack)"
-      ~deps:[ %.mlypack ]
-      ~prods:[ %.mli; %.ml ]
-      ~doc:"Menhir supports building a parser by composing several .mly files
-            together, containing different parts of the grammar description. To
-            use that feature with ocamlbuild, you should create a .mlypack file
-            with the same syntax as .mllib or .mlpack files: a
-            whitespace-separated list of the capitalized module names of the .mly
+      ~deps:[ "%.mlypack" ]
+      ~prods:[ "%.mli"; "%.ml" ]
+      ~doc:"Menhir supports building a parser by composing several .mly files \
+            together, containing different parts of the grammar description. To \
+            use that feature with ocamlbuild, you should create a .mlypack file \
+            with the same syntax as .mllib or .mlpack files: a \
+            whitespace-separated list of the capitalized module names of the .mly \
             files you want to combine together."
       <fun>
 
